@@ -1,0 +1,156 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build:
+  tags:
+    - ugrad
+  stage: build
+  script:
+    - cd miner
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make
+  artifacts:
+    paths:
+      - miner/miner
+
+test00:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 00
+
+test01:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 01
+
+test02:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 02
+
+test03:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 03
+
+test04:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 04
+
+test05:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 05
+
+test06:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 06
+
+test07:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 07
+
+test08:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 08
+
+test09:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 09
+
+test10:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 10
+
+test11:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 11
+
+test12:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 12
+
+test13:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 13
+
+test14:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 14
+
+test15:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 15
+
+test16:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 16
+
+test17:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 17
+
+test18:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 18
+
+test19:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./tests/test.sh 19
